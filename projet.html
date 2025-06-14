@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <title>'Just For You' Page !</title>
+    <style>
+    
+    #click{
+      position: absolute;
+      top: 55%;
+      left: 43%;
+      background-color: darkolivegreen;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 20px 30px;
+      font-family: fantasy;
+      font-style: italic;
+      cursor: pointer;
+      border-radius: 10px;
+      text-align: center;
+
+    }
+
+    #click:hover {
+
+      background-color:#239b56 ;
+      color:whitesmoke;
+
+    }
+
+
+    #metin{
+      display:none;
+    }
+
+    #surprise{
+      display:none;
+      position: absolute;
+      top: 45%;
+      left: 42%;
+      background-color:#ec7063;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 20px 30px;
+      font-family: fantasy;
+      font-style: italic;
+      cursor: pointer;
+      border-radius: 10px;
+      transition-duration: 0.4s;
+    }
+
+    #surprise:hover{
+
+      background-color:#f5b7b1;
+      color:#7b241c;
+    }
+
+    .metin_style{
+
+      display:inline-block;
+      position: absolute;
+      top: 29%;
+      left: 35%;
+      background-color:#af7ac5;
+      color: white;
+      font-size: 20px;
+      padding:20px 40px;
+      font-family: fantasy;
+      border-radius: 10px;
+
+    }
+    .gif_style{
+      display:none;
+      position :absolute;
+      left:40%;
+      top:10%;
+    }
+
+
+
+    #sozler {
+      text-align: center;
+      font-size: 26px;
+      margin-top: 25%;
+    }
+
+    #suivant {
+
+      display:none;
+      background-color:#ec7063;
+      color:whitesmoke;
+      font-size: 20px;
+      font-family: fantasy;
+      border-radius: 10px;
+      padding:20px 30px;
+      position: absolute;
+      margin-top:20px;
+      left:45%;
+      cursor:pointer;
+    }
+    
+    #suivant:hover{
+
+      background-color:#f5b7b1;
+      color:#7b241c;
+    }
+
+
+
+
+
+    .answer_style{
+
+      background-color:rgb(190, 28, 28);
+      color:whitesmoke;
+      font-family: fantasy;
+      font-size: 20px;
+      border-radius: 10px;
+      width :250px;
+      height:50px;
+      cursor:pointer;
+      display: flex;
+      flex-direction: column;
+      margin-bottom :20px;
+      text-align:center;
+      justify-content: center; /* Yatay ortalama */
+      align-items: center;
+    
+    }
+
+    .question_style
+    {
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      font-size: 25px;
+      color:rgb(58, 56, 56);
+      
+    }
+
+    #total{
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* her şey ortalanır */
+      gap: 20px;
+      margin-top: 100px;
+    }
+
+  
+      
+    #harry_total{
+      display:none;
+      flex-direction:column;
+      align-items: center;
+      gap:20px;
+    }
+
+    .harry_button_style{
+      
+      background-color:maroon;
+      color:whitesmoke;
+      font-family: fantasy;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor:pointer;
+      text-align:center;
+      padding:20px 30px;
+    }
+
+    #test_total{
+      display: none;
+      flex-direction: column;
+      align-items: center; /* her şey ortalanır */
+      gap: 20px;
+    }
+
+    #avant_final{
+
+      background-color:maroon;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 20px 30px;
+      font-family: fantasy;
+      font-style: italic;
+      cursor: pointer;
+      border-radius: 10px;
+
+    }
+
+
+    #ball_total{
+      display: none;
+      flex-direction: column;
+      align-items: center; /* her şey ortalanır */
+      gap: 20px;
+    }
+
+ 
+
+    #ball_question
+    {
+  
+      font-size:16px;
+      color:crimson;
+      font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      width: 350px;
+
+    }
+
+    #final{
+
+      background-color:#ec7063;
+      color:whitesmoke;
+      font-size: 20px;
+      font-family: fantasy;
+      border-radius: 10px;
+      padding:20px 30px;
+      cursor:pointer;
+
+    }
+
+    .ball_answer_style{
+      font-size: 20px;
+      font-style:italic;
+      font-family:'Times New Roman', Times, serif;
+      color:crimson;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .shake {
+      animation: shake 0.8s ease-in-out;
+    }
+    
+    @keyframes fadeInAndFocus {
+      0% {
+        opacity: 0;
+        filter: blur(10px);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+    #yeter{
+      display: none;
+      flex-direction: column;
+      align-items: center; 
+      gap: 10px;
+    }
+    
+    
+    #myImage{
+      width:400px;
+      height:500px;
+      animation: fadeInAndFocus 10s ease-out forwards;
+    }
+    
+    #son_text{
+      margin-top:-50px;
+      font-size:28px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      animation: fadeInAndFocus 3s ease-out forwards;
+    }
+
+    #sonuc{
+      font-size:45px;
+      background-color: beige;
+      animation: fadeInAndFocus 5s ease-out forwards
+    }
+  </style>
+
+
+
+</head>
+
+<body style = "background-color : #bad895;">
+<img id ="gifim" src = "mario.gif" width = "20%" height = "40%">
+<button id = "click">Let's Start ｡^‿^｡</button>
+<div id="mario"></div>
+
+<p id = "metin">Why do I think you will ace this exam ?</p>
+<button id = "surprise">Hmmm yeah ? o-o</button>
+
+<img id="doggie" src="bunny.gif" width = "20%" height = "40%">
+<div id="sozler"></div>
+<button id = "suivant">Next</button>
+<div id="total">
+  <div id = "question"></div>
+  <div id = "answer"></div>
+</div>
+
+<div id ="harry_total">
+  <p id = "harry_text" style="font-size:25px ; font-family:sans-serif ;color:maroon ;margin-top:-40px;">Welcome To The Harry Potter House Sorting Test!</p>
+  <div id = "harry_hat"></div>
+  <div id = "test_button"></div>
+</div>
+<div id ="test_total">
+  <img id ="harry_gif" src = "dumb.gif" style = "width:280px ;height:280px;">
+  <div id = "sonuc"></div>
+  <button id ="avant_final">Continue!</button>
+</div>
+
+<div id = "ball_total">
+  <label for = "ball_question">Please type your question and click on the magic ball for an answer !</label>
+  <input id = "ball_question">
+  <img id ="ball" src = "magic_ball.png"  onclick = "shake_ball()" width = "20%" height = "40%">
+  <div id = "ball_answer"></div>
+  <button id ="final">Click to continue !</button>
+</div>
+
+<div id ="yeter">
+  <p id ="son_text">Tebrikler ! HABIBILENDIN :)</p>
+  <img id="myImage" src="arabia.jpg">
+</div>
+<img id ="dans_eden_arap" src ="dancing.gif" style="display:none;position:absolute;top:35%;left:10%;width:250px;height:250px;">
+<div id="ses"></div>
+
+
+<script src = "projet.js"></script>
+</body>
+</html>
